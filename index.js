@@ -5,3 +5,4 @@ window.onload = function(){
   noteController.makeURLChangeShowNoteForCurrentPage();
   document.getElementsByTagName("a")[0].click()
 };
+git 
