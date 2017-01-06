@@ -1,11 +1,16 @@
 (function(exports) {
   function NoteList() {
     this.list = [];
-    NoteList.prototype.listNoteItems = function() {
+    this._idCount = 0;
+
+  NoteList.prototype.listNoteItems = function() {
       return this.list;
     };
-    NoteList.prototype.addNoteToList = function(note) {
+
+    NoteList.prototype.addNoteToList = function(text) {
+      note = new Note(text, this._idCount);
       this.list.push(note)
+      this._idCount ++ 
     };
   };
   exports.NoteList = NoteList;
